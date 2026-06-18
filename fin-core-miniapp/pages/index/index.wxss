@@ -1,0 +1,12 @@
+.container { padding: 40rpx; min-height: 100vh; }
+.login-box { display:flex; flex-direction:column; align-items:center; padding-top:120rpx; }
+.logo { font-size:48rpx; font-weight:bold; color:#409EFF; margin-bottom:60rpx; }
+.input { width:100%; height:88rpx; border:1px solid #dcdfe6; border-radius:8rpx; padding:0 24rpx; margin-bottom:24rpx; box-sizing:border-box; }
+.btn { width:100%; height:88rpx; line-height:88rpx; font-size:32rpx; border-radius:8rpx; }
+.dashboard { padding-top:20rpx; }
+.header { font-size:40rpx; font-weight:bold; color:#303133; margin-bottom:40rpx; text-align:center; }
+.grid { display:flex; flex-wrap:wrap; justify-content:space-between; }
+.card { width:46%; background:#fff; border-radius:12rpx; padding:32rpx 0; margin-bottom:24rpx; display:flex; flex-direction:column; align-items:center; box-shadow:0 2rpx 12rpx rgba(0,0,0,0.06); }
+.card-icon { font-size:48rpx; margin-bottom:12rpx; }
+.card text { font-size:28rpx; color:#606266; }
+.btn-logout { width:100%; margin-top:40rpx; font-size:28rpx; color:#909399; background:#f5f7fa; }

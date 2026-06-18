@@ -1,0 +1,45 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*-console.log
+
+# Temp scripts
+_*.bat
+
+# Env
+.env
+.env.production
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Playwright debug
+.playwright-cli/
+
+# Docker
+docker-data/

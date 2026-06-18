@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fin-core-gateway
+  config:
+    import: optional:nacos:fin-core-gateway.yaml
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: dev
+      config:
+        server-addr: localhost:8848
+        namespace: dev
+        file-extension: yaml
+    gateway:
+      routes:
+        - id: order-service
+          uri: lb://fin-core-order
+          predicates:
+            - Path=/api/v1/orders/**,/api/v1/settlements/**,/api/v1/fee-rules/**
+        - id: payment-service
+          uri: lb://fin-core-payment
+          predicates:
+            - Path=/api/v1/receipts/**,/api/v1/payments/**,/api/v1/bills/**,/api/v1/approvals/**
+        - id: fund-service
+          uri: lb://fin-core-fund
+          predicates:
+            - Path=/api/v1/accounts/**,/api/v1/transactions/**,/api/v1/reconciliations/**
+        - id: report-service
+          uri: lb://fin-core-report
+          predicates:
+            - Path=/api/v1/reports/**

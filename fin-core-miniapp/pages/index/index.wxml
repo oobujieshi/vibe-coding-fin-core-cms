@@ -1,0 +1,37 @@
+<view class="container">
+  <!-- Login form -->
+  <view class="login-box" wx:if="{{!isLoggedIn}}">
+    <view class="logo">FinCoreCms</view>
+    <input class="input" placeholder="用户名" value="{{username}}" bindinput="onInputUser" />
+    <input class="input" placeholder="密码" password value="{{password}}" bindinput="onInputPwd" />
+    <button class="btn" type="primary" bindtap="login" loading="{{loading}}">登录</button>
+  </view>
+
+  <!-- Dashboard -->
+  <view class="dashboard" wx:if="{{isLoggedIn}}">
+    <view class="header">FinCoreCms 财务管理</view>
+    <view class="grid">
+      <view class="card" bindtap="goBills">
+        <view class="card-icon">📋</view>
+        <text>账单查询</text>
+      </view>
+      <view class="card" bindtap="goPay">
+        <view class="card-icon">💳</view>
+        <text>支付确认</text>
+      </view>
+      <view class="card" bindtap="goScan">
+        <view class="card-icon">📷</view>
+        <text>扫码核销</text>
+      </view>
+      <view class="card" bindtap="goApprovals">
+        <view class="card-icon">✅</view>
+        <text>审批处理</text>
+      </view>
+      <view class="card" bindtap="goReports">
+        <view class="card-icon">📊</view>
+        <text>报表摘要</text>
+      </view>
+    </view>
+    <button class="btn-logout" bindtap="logout">退出登录</button>
+  </view>
+</view>

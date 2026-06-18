@@ -1,0 +1,9 @@
+package com.fincore.common.base.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.fincore.common.base.entity.Role;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface RoleMapper extends BaseMapper<Role> {
+}

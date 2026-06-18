@@ -1,0 +1,12 @@
+.container { padding: 24rpx; }
+.tabs { display: flex; margin-bottom: 24rpx; }
+.tab { flex: 1; text-align: center; padding: 16rpx 0; font-size: 28rpx; color: #606266; border-bottom: 2rpx solid transparent; }
+.tab.active { color: #409EFF; border-bottom-color: #409EFF; font-weight: bold; }
+.summary { display: flex; flex-wrap: wrap; gap: 16rpx; }
+.mini-card { width: 30%; background: #fff; border-radius: 12rpx; padding: 24rpx 16rpx; text-align: center; box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04); }
+.mini-label { display: block; font-size: 22rpx; color: #909399; margin-bottom: 8rpx; }
+.mini-val { font-size: 32rpx; font-weight: bold; color: #303133; }
+.green { color: #67C23A; }
+.red { color: #F56C6C; }
+.blue { color: #409EFF; }
+.big-num { margin-top: 24rpx; font-size: 24rpx; color: #909399; text-align: center; }

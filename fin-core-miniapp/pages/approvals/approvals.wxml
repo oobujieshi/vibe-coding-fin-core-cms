@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="title">待审批</view>
+  <view wx:if="{{list.length===0}}" class="empty">暂无待审批项</view>
+  <view wx:for="{{list}}" wx:key="id" class="card">
+    <view class="row">
+      <text class="biz-type">{{item.bizType}}</text>
+      <text class="status">{{item.approvalStatusDesc}}</text>
+    </view>
+    <view class="detail">业务ID: {{item.bizId}} | 第{{item.currentNode}}/{{item.totalNodes}}步</view>
+    <view class="actions" wx:if="{{item.approvalStatus===1}}">
+      <button class="btn-approve" size="mini" bindtap="approve" data-id="{{item.id}}">通过</button>
+      <button class="btn-reject" size="mini" bindtap="reject" data-id="{{item.id}}">驳回</button>
+    </view>
+  </view>
+</view>

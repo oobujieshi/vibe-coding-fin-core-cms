@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="title">支付确认</view>
+
+  <button class="scan-btn" bindtap="onScanCode">📷 扫码支付</button>
+
+  <view class="divider">或手动输入</view>
+  <input class="input" placeholder="请输入付款ID" value="{{code}}" bindinput="inputCode" />
+  <button class="btn" bindtap="queryById">查询</button>
+
+  <view wx:if="{{paymentNo}}" class="result">
+    <view class="card">
+      <view class="row"><text class="label">付款编号</text><text>{{paymentNo}}</text></view>
+      <view class="row"><text class="label">收款方</text><text>{{payee}}</text></view>
+      <view class="row"><text class="label">金额</text><text class="amount">¥{{amount}}</text></view>
+      <view class="row"><text class="label">状态</text><text class="status-tag">{{statusDesc}}</text></view>
+    </view>
+    <button wx:if="{{paymentStatus===1||paymentStatus===2}}" class="btn" type="primary" bindtap="confirmPay">确认支付</button>
+    <view wx:else class="done-msg">该付款已处理，无需重复操作</view>
+  </view>
+</view>

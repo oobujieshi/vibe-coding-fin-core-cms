@@ -1,0 +1,7 @@
+.container { padding: 24rpx; }
+.card { background: #fff; border-radius: 12rpx; padding: 24rpx; margin-bottom: 16rpx; box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04); }
+.label { font-size: 24rpx; color: #909399; margin-bottom: 8rpx; }
+.value { font-size: 30rpx; color: #303133; }
+.amount { font-size: 36rpx; color: #E6A23C; font-weight: bold; }
+.row { display: flex; gap: 16rpx; }
+.half { flex: 1; }

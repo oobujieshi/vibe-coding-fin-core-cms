@@ -1,0 +1,11 @@
+.container { padding: 24rpx; }
+.title { font-size: 36rpx; font-weight: bold; color: #303133; margin-bottom: 24rpx; }
+.scan-btn { width: 100%; height: 120rpx; line-height: 120rpx; font-size: 32rpx; margin-bottom: 32rpx; background: #ecf5ff; color: #409EFF; border: none; border-radius: 12rpx; }
+.divider { text-align: center; color: #c0c4cc; font-size: 24rpx; margin: 24rpx 0; }
+.input { width: 100%; height: 88rpx; border: 1px solid #dcdfe6; border-radius: 8rpx; padding: 0 24rpx; margin-bottom: 16rpx; box-sizing: border-box; }
+.btn { width: 100%; height: 88rpx; line-height: 88rpx; font-size: 32rpx; border-radius: 8rpx; margin-top: 24rpx; }
+.result { margin-top: 32rpx; }
+.card { background: #fff; border-radius: 12rpx; padding: 24rpx; box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04); }
+.row { display: flex; justify-content: space-between; padding: 12rpx 0; border-bottom: 1rpx solid #f2f2f2; }
+.label { color: #909399; font-size: 26rpx; }
+.amount { font-size: 36rpx; color: #F56C6C; font-weight: bold; }

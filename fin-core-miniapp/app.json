@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bills/bills",
+    "pages/bill-detail/bill-detail",
+    "pages/payment/payment",
+    "pages/scan-verify/scan-verify",
+    "pages/approvals/approvals",
+    "pages/reports/reports"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#409EFF",
+    "navigationBarTitleText": "FinCoreCms",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f7fa"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

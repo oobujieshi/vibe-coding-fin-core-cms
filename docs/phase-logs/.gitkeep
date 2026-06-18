@@ -1,0 +1,3 @@
+# Phase 执行日志目录
+
+各 Phase 的执行日志按 `Phase-X-log.md` 命名存放在此目录。

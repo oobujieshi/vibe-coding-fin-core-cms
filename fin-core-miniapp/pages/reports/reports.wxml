@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="tabs">
+    <view class="tab {{tab==='income'?'active':''}}" bindtap="switchTab" data-tab="income">收支</view>
+    <view class="tab {{tab==='balance'?'active':''}}" bindtap="switchTab" data-tab="balance">余额</view>
+    <view class="tab {{tab==='settle'?'active':''}}" bindtap="switchTab" data-tab="settle">结算</view>
+  </view>
+
+  <!-- 收支 -->
+  <view wx:if="{{tab==='income'}}">
+    <view class="summary">
+      <view class="mini-card"><text class="mini-label">总收入</text><text class="mini-val green">¥{{income.totalIncome}}</text></view>
+      <view class="mini-card"><text class="mini-label">总支出</text><text class="mini-val red">¥{{income.totalExpense}}</text></view>
+      <view class="mini-card"><text class="mini-label">净流量</text><text class="mini-val blue">¥{{income.netFlow}}</text></view>
+    </view>
+  </view>
+
+  <!-- 余额 -->
+  <view wx:if="{{tab==='balance'}}">
+    <view class="summary">
+      <view class="mini-card"><text class="mini-label">当前余额</text><text class="mini-val green">¥{{balance.currentBalance}}</text></view>
+      <view class="mini-card"><text class="mini-label">总流入</text><text class="mini-val blue">¥{{balance.totalInflow}}</text></view>
+      <view class="mini-card"><text class="mini-label">总流出</text><text class="mini-val red">¥{{balance.totalOutflow}}</text></view>
+    </view>
+    <view class="big-num">交易 {{balance.transactionCount}} 笔</view>
+  </view>
+
+  <!-- 结算 -->
+  <view wx:if="{{tab==='settle'}}">
+    <view class="summary">
+      <view class="mini-card"><text class="mini-label">订单总数</text><text class="mini-val">{{settle.totalOrders}}</text></view>
+      <view class="mini-card"><text class="mini-label">已结算</text><text class="mini-val">¥{{settle.settledAmount}}</text></view>
+      <view class="mini-card"><text class="mini-label">已付款</text><text class="mini-val">¥{{settle.paidAmount}}</text></view>
+    </view>
+    <view class="big-num">待结算 {{settle.pendingCount}} 笔 · ¥{{settle.pendingAmount}} | 已收款 ¥{{settle.receiptAmount}} | 已关闭 {{settle.closedCount}} 笔</view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title">账单列表</view>
+  <view wx:if="{{list.length===0}}" class="empty">暂无账单</view>
+  <view wx:for="{{list}}" wx:key="id" class="item" bindtap="goDetail" data-id="{{item.id}}">
+    <view class="row">
+      <text class="bill-no">{{item.billNo}}</text>
+      <text class="amount">¥{{item.totalAmount}}</text>
+    </view>
+    <view class="row sub">
+      <text>{{item.billPeriodStart}} ~ {{item.billPeriodEnd}}</text>
+      <text class="status">{{item.sendStatusDesc}}</text>
+    </view>
+  </view>
+</view>

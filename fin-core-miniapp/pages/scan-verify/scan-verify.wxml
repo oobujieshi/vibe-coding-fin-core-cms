@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="title">扫码核销</view>
+  <button class="scan-btn" bindtap="onScanCode">📷 扫描核销码</button>
+  <view class="divider">或手动输入</view>
+  <input class="input" placeholder="请输入核销码" value="{{verifyCode}}" bindinput="inputCode" />
+  <button class="btn" type="primary" bindtap="doVerify">核销</button>
+
+  <view wx:if="{{receipt}}" class="result">
+    <view class="card">
+      <view class="row"><text class="label">收款编号</text><text>{{receipt.receiptNo}}</text></view>
+      <view class="row"><text class="label">付款方</text><text>{{receipt.payerName}}</text></view>
+      <view class="row"><text class="label">金额</text><text class="amount">¥{{receipt.amount}}</text></view>
+      <view class="row"><text class="label">状态</text><text class="success">{{receipt.receiptStatusDesc}}</text></view>
+    </view>
+  </view>
+</view>

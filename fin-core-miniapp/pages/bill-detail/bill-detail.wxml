@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card">
+    <view class="label">账单编号</view>
+    <view class="value">{{detail.billNo}}</view>
+  </view>
+  <view class="card">
+    <view class="label">客户ID</view>
+    <view class="value">{{detail.customerId}}</view>
+  </view>
+  <view class="card">
+    <view class="label">账单周期</view>
+    <view class="value">{{detail.billPeriodStart}} ~ {{detail.billPeriodEnd}}</view>
+  </view>
+  <view class="row">
+    <view class="card half">
+      <view class="label">总额</view>
+      <view class="value amount">¥{{detail.totalAmount}}</view>
+    </view>
+    <view class="card half">
+      <view class="label">已付</view>
+      <view class="value amount">¥{{detail.paidAmount}}</view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="label">状态</view>
+    <view class="value">{{detail.sendStatusDesc}}</view>
+  </view>
+</view>

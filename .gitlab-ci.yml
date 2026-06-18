@@ -1,0 +1,51 @@
+# FinCoreCms CI/CD Pipeline
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+
+# ========== 后端构建 ==========
+backend-build:
+  stage: build
+  image: maven:3.9-eclipse-temurin-17
+  script:
+    - mvn clean compile -DskipTests
+  cache:
+    paths:
+      - .m2/repository/
+  only:
+    changes:
+      - "pom.xml"
+      - "fin-core-*/**"
+
+# ========== 后端测试 ==========
+backend-test:
+  stage: test
+  image: maven:3.9-eclipse-temurin-17
+  script:
+    - mvn test
+  cache:
+    paths:
+      - .m2/repository/
+  only:
+    changes:
+      - "pom.xml"
+      - "fin-core-*/**"
+
+# ========== 前端构建 ==========
+frontend-build:
+  stage: build
+  image: node:22-alpine
+  script:
+    - cd fin-core-web
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - fin-core-web/dist/
+  only:
+    changes:
+      - "fin-core-web/**"
